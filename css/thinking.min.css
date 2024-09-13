@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+.thinking-hero {
+    padding: 180px 190px 50px 190px;
+    display: block
+}
+
+.thinking-hero h1 {
+    visibility: hidden;
+    text-align: center;
+    font-size: var(--fs-64);
+    font-weight: 500;
+    font-family: ideamet, Arial, sans-serif;
+    color: #85888b;
+    line-height: 80px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+@media screen and (max-width:640px) {
+    .thinking-hero {
+        padding: 150px 0 40px 0
+    }
+
+    .thinking-hero h1 {
+        line-height: 35px
+    }
+}
+
+@media screen and (min-width:640px) and (max-width:1200px) {
+    .thinking-hero {
+        padding: 90px 0 30px 0
+    }
+
+    .thinking-hero h1 {
+        line-height: 45px
+    }
+}
+
+.conceptual-work-section {
+    padding: 0 30px
+}
+
+.conceptual-work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px
+}
+
+.grid-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+}
+
+.portrait-container {
+    aspect-ratio: 24/33;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover
+}
+
+.landscape-container {
+    aspect-ratio: 1.3/1;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover
+}
+
+.square-container {
+    aspect-ratio: 1/1;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover
+}
+
+.image-container:hover img {
+    opacity: 0
+}
+
+.conceptual-work-section-small-screen {
+    padding: 0 20px
+}
+
+.conceptual-work-grid-small-screen {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: max-content;
+    gap: 20px
+}
+
+@media screen and (max-width:960px) {
+    .conceptual-work-grid-small-screen {
+        display: grid
+    }
+
+    .conceptual-work-section {
+        display: none
+    }
+
+    .grid-column {
+        gap: 20px
+    }
+}
+
+#rec610386068 .t396__artboard,
+#rec610386068 .t396__carrier,
+#rec610386068 .t396__filter {
+    height: 75vh
+}
+
+.matter-container {
+    border-bottom: 1px solid #101820;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 0
+}
+
+.svgs {
+    display: none
+}
+
+.number-embed {
+    width: 100px;
+    color: #464655;
+    display: inline-block
+}
+
+.page {
+    position: relative
+}
+
+.page img {
+    position: absolute;
+    bottom: 0;
+    border-bottom: 1px solid #101820
+}
+
+@media screen and (min-width:320px) and (max-width:640px) {
+    .page {
+        display: none
+    }
+}

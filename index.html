@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Tags -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1190828882194953');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1190828882194953&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+  <!-- schema -->
+
+
+  <!-- breadcrumbs -->
+  <!-- Breadcrumb Schema Markup -->
+   <title>Integra Magna | Branding, Strategy, and UX UI Design Agency</title>
+  <link rel="shortcut icon" href="/assets/integramagna-fevicon.ico" type="image/x-icon" />
+  <link rel="canonical" href="https://integramagna.com" />
+  <link rel="stylesheet" href="./css/normalize.min.css" />
+  <link rel="stylesheet" href="./css/global.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/landing.min.css" />
+
+</head>
+
+<body>
+      <div id="scroll-animate">
+      <div id="scroll-animate-main">
+        <div class="wrapper-parallax">
+          <section class="form-container-section">
+            <div class="footer-form-section">
+              <div class="footer-upperline">
+                <p>
+                  Drop us a line or come grab a coffee, it’s on us, and let's
+                  design the extraordinary together
+                </p>
+              </div>
+              <div id="footer_container">
+                <div class="footer">
+                  <form id="my_form" onsubmit="handleSubmit(event)">
+                    <p class="footer_p">
+                      Hey, I’m
+                      <span>
+                        <input type="text" placeholder="your name" id="nameuser" required autocomplete="off" class="name_box" />
+                      </span>
+                      Let's grab a virtual coffee and chat things out. Reach me back at
+                      <span>
+                        <input type="email" placeholder="your email address" id="gmaiiluser" 
+                               oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" 
+                               name="email" required autocomplete="off" class="gmail_box" />
+                      </span>Here’s what I’m thinking:
+                      <span>
+                        <textarea placeholder="Spill the ink of your mind right here..." id="textuser"
+                          autocomplete="off" rows="1"></textarea>
+                      </span>
+                    </p>
+                    <div class="footer_bt">
+                      <div class="socialmedia_icon">
+                        <p>
+                          <span><a href="https://www.instagram.com/integra.magna/" target="_blank">Ig</a></span>
+                          <span><a href="https://www.linkedin.com/company/integramagna/" target="_blank">In</a></span>
+                          <span><a href="https://twitter.com/Integra_Magna/" target="_blank">X</a></span>
+                          <span><a href="https://www.behance.net/integra_magna/" target="_blank">Be</a></span>
+                        </p>
+                      </div>
+                      <button type="submit" id="btnSubmit" heft="#submitted">Submit</button>
+                    </div>
+                  </form>
+
+                  
+                  <script>
+
+                    document.getElementById('btnSubmit').addEventListener('click', function() {
+                        // Track a Facebook Pixel event when the button is clicked
+                        fbq('track', 'Lead', {
+                          button_clicked: 'Submit button clicked'
+                        });
+                    
+                        // Optionally, do other things like form submission here
+                        console.log('Button clicked, Lead event tracked');
+                      });
+                   function handleSubmit(event) {
+                        event.preventDefault(); // Prevents the default form submission
+                        
+                        // Track lead event for Facebook Pixel
+                        fbq('track', 'Lead', {
+                            name: document.getElementById('nameuser').value,
+                            email: document.getElementById('gmaiiluser').value,
+                            message: document.getElementById('textuser').value
+                        });
+                    
+                        // You can process form data submission here (e.g., send it to your server)
+                        
+                        console.log("Form submitted");
+
+                        // Optionally, reset the form
+                        document.getElementById('my_form').reset();
+                     window.location.hash = 'submitted';
+                    }
+
+                  </script>
+                  
+                  <!-- <div id="alertBox" class="alert-box">
+                    <span class="close-btn" onclick="closeAlert()">&times;</span>
+                    <div class="Submit_form_text">
+                      Cheers for dropping us a line! We're brewing up a coffee
+                      chat and will invite you shortly. Stay caffeinated!
+                    </div>
+                    <div class="socialmedia_icon" id="Submit_form_socialmedia_Icon">
+                      <p>
+                        <span><a href="https://www.instagram.com/integra.magna/" target="_blank">Ig</a></span>
+                        <span><a href="https://www.linkedin.com/company/integramagna/" target="_blank">In</a></span>
+                        <span><a href="https://twitter.com/Integra_Magna/" target="_blank">X</a></span>
+                        <span><a href="https://www.behance.net/integra_magna/" target="_blank">Be</a></span>
+                      </p>
+                    </div>
+                  </div> -->
+                  <section class="footer-form-pop" id="footer-form-pop">
+
+                    <div class="popform-container" id="popform-container">
+                      <div class="footerform-close-button-c">
+                        <button type="button" class="footerform-close-button" aria-label="Close dialog window"
+                          id="footerclose-form-button" type="button" onclick="closePopup()">
+                          <svg role="presentation" class="t-popup__close-icon" width="23px" height="23px"
+                            viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="#101820" fill-rule="evenodd">
+                              <rect
+                                transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) "
+                                x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+                              <rect
+                                transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) "
+                                x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+                            </g>
+                          </svg></button>
+                      </div>
+                      <div class="popform-content">
+                        <div class="pop-text">
+                          <h1 class="popform-head">Thank You! <svg width="54" height="56" viewBox="0 0 54 56"
+                              fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                              <rect width="54" height="56" fill="url(#pattern0_4234_987)" />
+                              <defs>
+                                <pattern id="pattern0_4234_987" patternContentUnits="objectBoundingBox" width="1"
+                                  height="1">
+                                  <use xlink:href="#image0_4234_987"
+                                    transform="matrix(0.00763491 0 0 0.00741832 -0.351293 -0.349398)" />
+                                </pattern>
+                                <image id="image0_4234_987" width="223" height="229"
+                                  xlink:href="data:image/png;base64,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" />
+                              </defs>
+                            </svg>
+                          </h1>
+                          <p class="popform-para">We've recieved your message and will respond within 24 hours. <br><br>
+                            In the meantime, make sure to follow us on social!
+                          </p>
+                        </div>
+                        <div class="socialmedia_icon">
+                          <p>
+                            <span><a href="https://www.instagram.com/integra.magna/" target="_blank">Ig</a></span>
+                            <span><a href="https://www.linkedin.com/company/integramagna/" target="_blank">In</a></span>
+                            <span><a href="https://twitter.com/Integra_Magna/" target="_blank">X</a></span>
+                            <span><a href="https://www.behance.net/integra_magna/" target="_blank">Be</a></span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </section>
+                  <script>
+                    // function handleSubmit(event) {
+                    //   event.preventDefault();
+                    //   document.getElementById('footer-form-pop').style.display = 'flex';
+                    //   document.getElementById('popform-container').style.display = 'flex';
+                    // }
+
+                    function closePopup() {
+                      document.getElementById('footer-form-pop').style.display = 'none';
+                      document.getElementById('popform-container').style.display = 'none';
+                    }
+
+
+                    // Function to validate email
+                    function validateEmail(email) {
+                      var re = /\S+@\S+\.\S+/;
+                      return re.test(email);
+                    }
+                  </script>
+
+                  </script>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js"></script>
+  <!-- --------------------SCRIPTS-------------------- -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
+  <script src="./js/jquery.min.js"></script>
+
+  <script src="./js/jquery-3.7.1.min.js"></script>
+
+  <script src="./js/smtp.js"></script>
+
+  <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
+  <!-- <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+ <!--  <script src="./js/global.min.js"></script>-->
+
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+:root {
+    --fs-100: clamp(1.88rem, 4.38vi + 1rem, 6.25rem);
+    --fs-36: clamp(1.25rem, 1vi + 1.05rem, 2.25rem);
+    --fs-32: clamp(1rem, 1vi + 0.8rem, 2rem);
+    --fs-24: clamp(1rem, 0.5vi + 0.9rem, 1.5rem)
+}
+
+
+
+@font-face {
+    font-family: ideamet;
+    src: url(/font/ideamet.woff);
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ideamet;
+    font-weight: 500;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+header {
+    display: flex;
+    position: fixed
+}
+
+.header-section {
+    display: block;
+    position: relative;
+    padding: 50px 115px
+}
+.header-section img{
+    width: 160px;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100vh;
+    width: 100%
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%
+}
+
+.heading_text {
+    font-size: var(--fs-100);
+    font-family: ideamet;
+}
+
+
+.hero-description {
+    font-size: var(--fs-24) !important;
+    font-weight: 500;
+    font-family: ideamet;
+    color: grey;
+    width: 80%
+}
+
+@media screen and (max-width:960px) {
+    header {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    .header-section {
+        padding: 30px 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    .hero-section {
+        gap: 30px
+    }
+
+    .header-section:first-child {
+        width: 100% !important;
+        justify-content: center !important;
+        align-items: center
+    }
+}
+
+.main a {
+    text-decoration: none
+}
+
+.case-nav-holder {
+    display: flex;
+    text-decoration: none;
+    width: 100%;
+    align-items: center;
+    font-family: ideamet;
+    gap: 15px;
+    font-size: var(--fs-20);
+    font-weight: 500;
+    justify-content: center
+}
+
+.case-nav-back-arrow {
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 8px;
+    color:#101820;
+    aspect-ratio: 1/1;
+    height: 58px;
+    font-family: ideamet;
+    list-style: none;
+    display: flex;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background: url(../assets/casestudy-arrowback.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.case-navlinks {
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 8px;
+    color:#101820;
+    padding: 0;
+    font-family: ideamet;
+    aspect-ratio: 223/58;
+    text-align: center;
+    justify-content: center;
+    height: 58px;
+    width: 223px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    background: url(../assets/casestudy-navbar-blur.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain
+}
+
+.case-nav-item {
+    width: 85%;
+    display: flex;
+}
+
+.case-nav-holder a {
+    text-decoration: none;
+    color:#101820
+}
+
+.c-textMarquee {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    contain: layout paint
+}
+
+.c-textMarquee__text {
+    font-style: normal;
+    font-family: ideamet;
+    font-weight: 500;
+    will-change: transform;
+    flex-shrink: 0;
+    white-space: nowrap;
+    display: flex
+}
+
+@media(max-width:1023px) {
+    .c-textMarquee__text {
+        line-height: 55px
+    }
+}
+
+@keyframes moveText {
+    from {
+        transform: translateX(0)
+    }
+
+    to {
+        transform: translateX(-100%)
+    }
+}
